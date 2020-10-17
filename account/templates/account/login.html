@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Log-in{% endblock %}
+{% block content %}
+
+    <h1>Iniciar Sesión</h1>
+    <p>Por favor, llena los campos para iniciar sesión</p>
+    <form method="post">
+        <p>(Campos de formulario generados en autom&aacutetico por Django)</p>
+        {{ form.as_p }}
+        {% comment %}<input type="password" class="form-control" name="password" id="inputPass" placeholder="Contraseña" required>variante para personalizar el formulario {% endcomment %}
+        {% csrf_token %}
+       
+        <p><input type="submit" value="Iniciar sesión"></p>
+        
+    </form>
+
+{% endblock %} 
